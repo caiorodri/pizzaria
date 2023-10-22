@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pizzaria?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: 
+
+  jpa:
+    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate.ddl_auto: update
+
+  thymeleaf:
+    mode: HTML
+    cache: FALSE

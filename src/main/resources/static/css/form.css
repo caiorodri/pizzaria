@@ -1,0 +1,40 @@
+.container {
+
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+
+}
+
+.form{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+
+}
+
+#form-registro{    
+    width: 40%;
+    height: 100%;
+}
+
+
+#form-login{    
+    width: 40%;
+    height: 50%;
+}
+
+#form-registro button {
+
+    width: 50%;
+    border-radius: 1rem;
+
+}

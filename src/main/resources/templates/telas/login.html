@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/menu-bar.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pizzaria - Login</title>
+</head>
+<body>
+	
+	<div th:replace="~{fragmentos/fragmento :: menu}"></div>	
+	
+	<div class="form-row justify-content-center container">
+  		<form method="post" action="/logar" id="form-login" class="form">
+  			<h2>Login</h2>
+	    	<div class="form-group col-md-6">
+		      <label for="inputEmail4">Email</label>
+		      <input type="email" class="form-control" name="email" placeholder="Email" required>
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label for="inputPassword4">Senha</label>
+		      <input type="password" class="form-control" name="senha" placeholder="Senha" required>
+		    </div>
+		    <button type="submit" class="btn btn-outline-primary">Logar-me</button>
+		</form>
+	</div>
+
+	
+	<script src="/webjars/jquery/3.7.1/jquery.min.js">
+	<script src="/webjars/bootstrap/5.3.2/bootstrap.min.js">
+	
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/menu-bar.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pizzaria - Cadastro</title>
+</head>
+<body>
+	
+	<div th:replace="~{fragmentos/fragmento :: menu}"></div>	
+	
+	<div class="container justify-content-center">
+		<form method="post" action="/cadastrar" id="form-registro" class="form" th:object="${cliente}">
+			
+			<h2>Cadastro</h2>
+	  		<div class="form-group col-md-6">
+	  			<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('nome')}">
+	  				<label class="validation-message" th:errors="*{nome}"></label>
+	  			</div>
+		      	<label for="inputName">Nome</label>
+		      	<input type="text" class="form-control" name="nome" placeholder="Nome" required>
+		    </div>
+	    	<div class="form-group col-md-6">
+	    		<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('email')}">
+	  				<label class="validation-message" th:errors="*{email}"></label>
+	  			</div>
+			    <label for="inputEmail">Email</label>
+				<input type="email" class="form-control" name="email" placeholder="Email" required>
+		    </div>
+		    <div class="form-group col-md-6">
+		    	<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('senha')}">
+	  				<label class="validation-message" th:errors="*{senha}"></label>
+	  			</div>
+				<label for="inputPassword">Senha</label>
+			    <input type="password" class="form-control" name="senha" placeholder="Senha" required>
+		    </div>
+		    <div class="form-group col-md-6">
+		    	<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('cpf')}">
+	  				<label class="validation-message" th:errors="*{cpf}"></label>
+	  			</div>
+		      <label for="inputCpf">Cpf</label>
+		      <input type="text" class="form-control" name="cpf" placeholder="Cpf" required>
+		    </div>
+		    <div class="form-group">
+		    	<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('endereco')}">
+	  				<label class="validation-message" th:errors="*{endereco}"></label>
+	  			</div>
+		    	<label for="inputAddress">Endereço</label>
+		    	<input type="text" class="form-control" name="endereco" placeholder="Rua ABC, nº 1" required>
+			</div>
+		    <div class="form-group">
+		    	<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('telefone')}">
+	  				<label class="validation-message" th:errors="*{telefone}"></label>
+	  			</div>
+		    	<label for="inputPhone">Telefone</label>
+		    	<input type="text" class="form-control" name="telefone" placeholder="Telefone" required>
+			</div>
+			<button type="submit" class="btn btn-outline-primary">Cadastrar-me</button>
+		</form>
+	</div>
+
+	<script src="/webjars/jquery/3.7.1/jquery.min.js">
+	<script src="/webjars/bootstrap/5.3.2/bootstrap.min.js">
+	
+</body>
+</html>

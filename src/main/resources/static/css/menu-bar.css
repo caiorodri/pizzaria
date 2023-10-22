@@ -1,0 +1,36 @@
+.menu-bar {
+
+    padding: 1.5rem 2rem;
+    background-color: #C3A474;
+    margin-bottom: 2rem;
+
+}
+
+.menu-bar > a {
+
+    font-size: 1.4rem;
+
+}
+.menu-bar > div > a {
+
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.15rem;
+
+}
+
+.itens {
+
+
+	gap: 1.5rem;
+
+
+}
+
+.sair {
+
+    background-color: rgb(255, 29, 29, .8);
+    padding: .5rem;
+    border-radius: 1rem;
+    
+}
