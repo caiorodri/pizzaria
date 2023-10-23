@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/menu-bar.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pizzaria - Pedido</title>
+</head>
+<body>
+	
+	<div th:replace="~{fragmentos/fragmento :: menu}"></div>
+	
+	<div class="home-content">
+	
+		<div class="pedido-content">
+			<h3>Pedido</h3>
+			<hr>
+			<table class="table table-bordered table-hover">
+				
+				<thead>
+				
+					<th scope="col">Nome</th>
+					<th scope="col">Valor R$</th>
+					<th scope="col">Remover</th>
+				
+				</thead>
+				<tbody>
+				
+					<tr scope="row" th:each="produtoc : ${carrinho}">
+						
+						<td th:text="${produtoc.nome}"></td>
+						<td th:text="${produtoc.valor}"></td>
+						<td style="text-align: center;"><a style="text-decoration: none;" th:href="@{/removerPedido/{id}(id=${produtoc.id})}"><button class="btn btn-outline-primary">-</button></a></td>
+						
+					</tr>
+					
+				</tbody>
+			</table>
+			<h3>Total: R$ <span th:text="${total}"></span></h3>
+			<a style="text-decoration: none;" th:href="@{/pagar}"><button class="btn btn-primary">Pagar</button></a>
+			
+		</div>
+	
+	</div>
+	
+	<script src="/webjars/jquery/3.7.1/jquery.min.js">
+	<script src="/webjars/bootstrap/5.3.2/bootstrap.min.js">
+	
+</body>
+</html>

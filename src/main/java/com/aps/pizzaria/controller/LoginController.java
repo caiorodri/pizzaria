@@ -39,8 +39,10 @@ public class LoginController {
 		if(cliente == null) {
 			return "redirect:/login";
 		} else {
+			
 			session.setAttribute("usuarioLogado", cliente);
-			session.setAttribute("carrinho", new ArrayList<Produto>());
+			session.setAttribute("pedido", new ArrayList<>());
+
 			return "redirect:/";
 		}
 	}

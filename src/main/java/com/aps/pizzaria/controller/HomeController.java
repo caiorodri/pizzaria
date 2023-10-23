@@ -24,13 +24,17 @@ public class HomeController {
 			
 			if(usuarioLogado != null) {
 				
-
+				
 				mv.setViewName("redirect:/cardapio");
 				
 			}
 			
 
-		} catch (Exception e) {}		
+		} catch (Exception e) {
+			
+			mv.setViewName("redirect:/");
+			
+		}		
 		
 		return mv;
 	}

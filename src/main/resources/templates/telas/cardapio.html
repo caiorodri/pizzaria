@@ -32,44 +32,17 @@
 					</thead>
 					<tbody>
 					
-						<tr scope="row" th:each="pizza : ${listaPizzas}">
+						<tr scope="row" th:each="produto : ${listaProduto}">
 						
-							<td th:text="${pizza.nome}"></td>
-							<td th:text="${pizza.descricao}"></td>
-							<td th:text="${pizza.valor}"></td>
-							<td style="text-align: center;"><button class="btn btn-outline-primary" >+</button></td>
-							
+							<td th:text="${produto.nome}"></td>
+							<td th:text="${produto.descricao}"></td>
+							<td th:text="${produto.valor}"></td>
+							<td style="text-align: center;"><a style="text-decoration: none;" th:href="@{/adicionarPedido/{id}(id=${produto.id})}"><button class="btn btn-outline-primary" >+</button></a></td>
 							
 						</tr>
 						
 					
 					</tbody>
-				</table>
-				<h3>Bebidas</h3>
-				<hr>
-				<table class="table table-bordered table-hover">
-				
-					<thead>
-					
-						<th scope="col">Nome</th>
-						<th scope="col">Descrição</th>
-						<th scope="col">Valor R$</th>
-						<th scope="col">Adicionar</th>
-					
-					</thead>
-					<tbody>
-					
-						<tr scope="row" th:each="bebida : ${listaBebidas}">
-						
-							<td th:text="${bebida.nome}"></td>
-							<td th:text="${bebida.descricao}"></td>
-							<td th:text="${bebida.valor}"></td>
-							<td style="text-align: center;"><button class="btn btn-outline-primary">+</button></td>
-						
-						</tr>
-					
-					</tbody>
-					
 				</table>
 			</div>
 		</div>
